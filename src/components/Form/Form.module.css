@@ -1,0 +1,71 @@
+.formContainer {
+    width: 53rem;
+    height: 35rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+
+}
+
+label {
+    display: block;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+h1 {
+    color: hsl(213, 96%, 18%);
+}
+
+p {
+    color: hsl(231, 11%, 63%);
+}
+
+input {
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1.5em;
+}
+
+form {
+    padding: 1em 2em 0 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+    width: 110px;
+    padding: 1em;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: hsl(243, 100%, 62%);
+    transition: ease-in .1s;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+    cursor: not-allowed;
+    background-color: #ccc;
+    color: #292929;
+    border-color: #ccc;
+}
+
+.errorText {
+    color: #b40e0e;
+    position: relative;
+    top: -15px;
+}
