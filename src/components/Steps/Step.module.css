@@ -25,6 +25,12 @@
     color: black;
 }
 
+.active {
+    background-color: #bee1fe;
+    border: 1px solid #bee1fe;
+    color: black;
+}
+
 .stage, .info {
     margin: 0;
     font-size: 14px;

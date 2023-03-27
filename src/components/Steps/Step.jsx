@@ -3,6 +3,8 @@ import React from 'react';
 import classes from './Step.module.css';
 
 const Step = (props) => {
+
+
   return (
     <div className={classes.stepContainer}>
         <span className={classes.circle}>{props.step}</span>

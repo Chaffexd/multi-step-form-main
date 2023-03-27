@@ -1,8 +1,12 @@
 import React from 'react';
+import PrevStep from '../UI/PrevStep';
 
-const Summary = () => {
+const Summary = (props) => {
   return (
-    <div>Summary</div>
+    <div>
+      <p>Summary</p>
+      <PrevStep {...props} />
+    </div>
   );
 };
 

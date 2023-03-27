@@ -2,9 +2,9 @@ import React from 'react';
 
 import classes from './NextStep.module.css';
 
-const NextStep = () => {
+const NextStep = (props) => {
   return (
-    <button>Next Step</button>
+    <button onClick={props.nextStep}>Next Step</button>
   );
 };
 

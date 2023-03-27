@@ -22,11 +22,11 @@ function App(props) {
   console.log(currentStep);
   return (
     <div className="App">
-      <Steps /> 
-      {currentStep === 1 && <Form nextStep={nextStepHandler} />}
-      {currentStep === 2 && <Plan nextStep={nextStepHandler} prevStep={prevStepHandler} />}
-      {currentStep === 3 && <Pricing />}
-      {currentStep === 4 && <Summary />}
+      <Steps currentStep={currentStep} /> 
+      {currentStep === 1 && <Form currentStep={currentStep} nextStep={nextStepHandler} />}
+      {currentStep === 2 && <Plan currentStep={currentStep} nextStep={nextStepHandler} prevStep={prevStepHandler} />}
+      {currentStep === 3 && <Pricing currentStep={currentStep} nextStep={nextStepHandler} prevStep={prevStepHandler} />}
+      {currentStep === 4 && <Summary prevStep={prevStepHandler} />}
     </div>
   )
 }

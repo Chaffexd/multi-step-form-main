@@ -1,8 +1,16 @@
 import React from 'react';
 
-const Pricing = () => {
+import PrevStep from '../UI/PrevStep';
+import NextStep from '../UI/NextStep';
+
+const Pricing = (props) => {
   return (
-    <div>Pricing</div>
+    <div>
+      <p>pricing slide</p>
+      <PrevStep {...props} />
+      <NextStep {...props} />
+    </div>
+
   );
 };
 

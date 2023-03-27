@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './PrevStep.module.css';
 
-const PrevStep = () => {
+const PrevStep = (props) => {
   return (
-    <button className={classes.goBack}>Go Back</button>
+    <button className={classes.goBack} onClick={props.prevStep}>Go Back</button>
   );
 };
 
