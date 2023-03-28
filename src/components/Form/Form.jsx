@@ -1,5 +1,6 @@
 import React from 'react';
 import useInput from '../../hooks/use-input';
+import NextStep from '../UI/NextStep';
 
 import classes from './Form.module.css';
 
@@ -43,7 +44,7 @@ const Form = (props) => {
   const handleSubmission = (e) => {
     e.preventDefault();
 
-    // if entered name is not present, just return and stop
+    // if entered name, email, phone is not present, just return and stop
     if(!enteredName && !emailIsValid && !phoneNumberIsValid) {
       return;
     };
@@ -60,7 +61,7 @@ const Form = (props) => {
   const phoneNumberInputClasses = phoneNumberError ? `${classes.formInput} ${classes.invalid}` : `${classes.formInput}`;
 
   const startingForm = 
-  <form onSubmit={handleSubmission}>
+  <div className={classes.formDivContainer}>
     <div>
       <h1>Personal Info</h1>
       <p>Please provide your name, email address and phone number.</p>
@@ -101,13 +102,13 @@ const Form = (props) => {
       {phoneNumberError && <span className={classes.errorText}>Please enter a valid phone number.</span>}
       </div>
     </div>
-    <button disabled={!isFormValid} onClick={props.nextStep} >Next Step</button>
-  </form>
+    <div className={classes.buttonContainer}>
+      <NextStep disabled={!isFormValid} nextStep={props.nextStep}>Next Step</NextStep>
+    </div>
+  </div>
 
   return (
-    <div className={classes.formContainer}>
-        {startingForm}
-    </div>
+    <>{startingForm}</>
   );
 };
 

@@ -29,6 +29,7 @@
     background-color: #bee1fe;
     border: 1px solid #bee1fe;
     color: black;
+    transition: ease-in .15s;
 }
 
 .stage, .info {
